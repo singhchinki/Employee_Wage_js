@@ -97,5 +97,6 @@ function totalDaysWorked(numOfDays, dailyWage) {
     return numOfDays;
 }
 console.log("UC 7G - Number of Days Emp Woeked: "+ empDailyWageArr.reduce(totalDaysWorked, 0));
-
+//UC 8 MAP Function
+ console.log("UC8A - EMP wage map totalHrs: " + Array.from(empDailyWageMap.values()).reduce(totalWages, 0));
 

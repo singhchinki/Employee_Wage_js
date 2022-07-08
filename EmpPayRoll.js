@@ -13,8 +13,14 @@ class EmployeePayRollData{
         this.startDate = params[4];
     }
     //getter And setter method
-    get name(){return this._name;}
-    set name(name){this._name = name; }
+
+    get name() {return this._name; }
+    set name(name) {
+    let nameRegex = RegExp('^[A-z]{1}[a-z]{3,}$');
+        if (nameRegex.test(name))
+        this._name = name;
+        else throw 'Name is incorrect';
+    }
 
     //method
     toString(){
@@ -24,7 +30,7 @@ class EmployeePayRollData{
 
     }
 }
-let employeePayRollData = new EmployeePayRollData(1, "lakshmi", 30000);
+let employeePayRollData = new EmployeePayRollData(1, "lak", 30000);
 console.log(employeePayRollData.toString());
 employeePayRollData.name = "prasanna";
 console.log(employeePayRollData.toString());
